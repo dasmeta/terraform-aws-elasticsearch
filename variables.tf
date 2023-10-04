@@ -110,7 +110,6 @@ variable "create_service_link_role" {
   default     = true
 }
 
-
 variable "advanced_security_options_enabled" {
   description = "Whether advanced security is enabled (Forces new resource)"
   type        = bool

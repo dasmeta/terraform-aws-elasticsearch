@@ -40,7 +40,6 @@ module "elastic_search" {
   timeouts_update          = var.timeouts_update
   create_service_link_role = var.create_service_link_role
 
-
   advanced_security_options_enabled                        = var.advanced_security_options_enabled
   advanced_security_options_internal_user_database_enabled = var.internal_user_database_enabled
   advanced_security_options_master_user_arn                = var.master_user_arn
@@ -50,7 +49,6 @@ module "elastic_search" {
   advanced_security_options_random_master_password_length  = var.random_master_password_length
   domain_endpoint_options_enforce_https                    = var.domain_endpoint_options_enforce_https
 }
-
 
 resource "aws_security_group" "elastic_search_sg" {
   count = length(data.aws_subnet.selected)
